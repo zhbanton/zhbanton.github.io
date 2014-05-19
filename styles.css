@@ -1,0 +1,73 @@
+body {
+  font-family: "cabin", plaintext;
+}
+header {
+  text-align: center;
+  background-size: cover;
+  background: black;
+  color: white;
+}
+a {
+  color: white;
+}
+h1 {
+  margin: -5px 0 0 0;
+  font-size: 50px;
+}
+ul {
+  padding: 10px;
+}
+li {
+  display: inline;
+  padding: 0px 10px 0px 10px;
+}
+div {
+  width: 100%;
+  float: left;
+  text-align: center;
+  font-size: 15px;
+}
+img {
+  border: 10px solid black;
+  border-radius: 10px;
+  height: 400px;
+}
+button {
+  background-color: green;
+  color: white;
+  width: 100px;
+}
+h1{
+  font-size: 30px;
+  text-align: center;
+}
+article {
+  max-width: 500px;
+  margin: 0 auto;
+}
+.grad {
+  height: 200px;
+  margin: 50px 0 0 0;
+  border: 10px solid white;
+  border-radius: 150px;
+}
+.image1 {
+  float: right;
+  height: 250px;
+}
+.image2 {
+  height: 250px;
+}
+.image3 {
+  height: 400px;
+}
+.top-table {
+  float: right;
+}
+.middle-table {
+  width: 100%;
+  margin: 0 auto;
+}
+.buttons {
+  text-align: center;
+}

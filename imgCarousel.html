@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<head>
+<link href='styles.css' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Cabin' rel='stylesheet' type='text/css'>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+  <header>
+    <img class="grad" src="https://fbcdn-sphotos-g-a.akamaihd.net/hphotos-ak-ash3/t1.0-9/599442_10151036716302652_1787012155_n.jpg">
+    <h1>Zack Banton</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about_me.html">About Me</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="imgCarousel.html">More Images</a></li>
+    </ul>
+  </header>
+<body>
+	<div class="image"></div>
+	<div class="buttons">
+		<button id="prev">previous</button>
+		<button id="next">next</button>
+	</div>
+<script>
+
+var images = [
+'https://scontent-b-ord.xx.fbcdn.net/hphotos-ash4/t1.0-9/1239944_10202070096773190_1189940444_n.jpg', 
+'https://scontent-b-ord.xx.fbcdn.net/hphotos-prn2/t1.0-9/1380360_2376514172289_674191873_n.jpg', 
+'https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-prn1/t1.0-9/68872_1548441523074_2530655_n.jpg', 
+'https://scontent-a-ord.xx.fbcdn.net/hphotos-prn2/t1.0-9/1075856_2263580909028_1442224418_n.jpg'];
+
+var currentImage = 0;
+
+var nextImage = function() 
+{
+	if(currentImage < images.length)
+	{
+		$('.image').html('<img src=' + images[currentImage] + '>');
+		currentImage++;
+	}
+}
+
+var prevImage = function()
+{
+	if(currentImage > 1)
+	{
+		currentImage--;
+		$('.image').html('<img src=' + images[currentImage - 1] + '>');
+	}
+}
+
+$('#next').click(function() {
+	nextImage();
+});
+$('#prev').click(function() {
+	prevImage();
+});
+
+nextImage();
+</script>
+</body>
