@@ -45,6 +45,16 @@ article {
   max-width: 500px;
   margin: 0 auto;
 }
+p {
+  text-align: center;
+  line-height: 50px;
+}
+textarea {
+  border: 5px solid black; 
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 .grad {
   height: 200px;
   margin: 50px 0 0 0;
@@ -69,5 +79,11 @@ article {
   margin: 0 auto;
 }
 .buttons {
+  text-align: center;
+  padding: 0 0 100px 0;
+}
+.caption {
+  padding: 10px;
+  margin: 0 auto;
   text-align: center;
 }

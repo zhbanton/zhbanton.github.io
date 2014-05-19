@@ -11,12 +11,13 @@
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="about_me.html">About Me</a></li>
-      <li><a href="#">Contact</a></li>
+      <li><a href="contact.html">Contact</a></li>
       <li><a href="imgCarousel.html">More Images</a></li>
     </ul>
   </header>
 <body>
 	<div class="image"></div>
+	<div class="caption"></div>
 	<div class="buttons">
 		<button id="prev">previous</button>
 		<button id="next">next</button>
@@ -29,7 +30,14 @@ var images = [
 'https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-prn1/t1.0-9/68872_1548441523074_2530655_n.jpg', 
 'https://scontent-a-ord.xx.fbcdn.net/hphotos-prn2/t1.0-9/1075856_2263580909028_1442224418_n.jpg'];
 
+var captions = [
+'top of the throne',
+'at the sox game',
+'hiking Mt. Ranier',
+'branzino'];
+
 var currentImage = 0;
+var currentCaption = 0;
 
 var nextImage = function() 
 {
@@ -37,6 +45,9 @@ var nextImage = function()
 	{
 		$('.image').html('<img src=' + images[currentImage] + '>');
 		currentImage++;
+
+		$('.caption').html(captions[currentCaption]);
+		currentCaption++;
 	}
 }
 
@@ -46,6 +57,9 @@ var prevImage = function()
 	{
 		currentImage--;
 		$('.image').html('<img src=' + images[currentImage - 1] + '>');
+
+		currentCaption--;
+		$('.caption').html(captions[currentCaption -1]);
 	}
 }
 
